@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3
+    {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('parallax1.jpg');
+        min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("parallax3.jpg");
+        min-height: 400px;
+    }
+
+    .bgimg-3 {
+        background-image: url("parallax7.jpg");
+        min-height: 400px;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button w3-dark-grey">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-dark-grey"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="#resume" class="w3-bar-item w3-button w3-hide-small w3-dark-grey"><i class="fa fa-file"></i> RESUME </a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-dark-grey"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-black w3-dark-grey">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Samantha's Portfolio Website</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p>I would describe myself as a highly motivated and results-driven self-started developer launching a career in building web applications
+             and services. I'm interested in writing code that is reusable and scalable, working on a product with a vision, and learning new technologies. 
+            Focused on solving problems by writing easy-to-use and easy-to-read code.</p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Samantha Manning</b></p><br>
+                <img src="profile.jpg" class="w3-round w3-image" alt="Photo of Samantha Manning"
+                    width="300">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>In my free time I love a good adventure. From climbing mountains to exploring cities, I love finding new experiences and challenging
+                     my comfort zone. Some of my favorite times have been hiking Mount Pisgah in Asheville, NC and climbing the waterfalls in Catawba, NC.
+                     On rainy days I can be found inside with my favoite videogames or some warm tea, a good book, and the company of my dog Lilly.
+                     I'm constanly looking to expand my mind and my imagination. 
+                 </p>
+            </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">My Skills include:</p>
+        <p class="w3-wide"><i class="fab fa-python"></i>Python</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-html5"></i>HTML5</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fab fa-css3-alt"></i>CSS</p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+        </div>    
+    </div>
+
+    <!-- Second Parallax Image with Resume Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">HIRE ME</span>
+        </div>
+    </div>
+
+<!-- Container (Resume Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="resume">
+        <h3 class="w3-center">RESUME</h3>
+    
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="resume.jpg" class="w3-round w3-image" alt="Desk with Computer">
+    </div>
+        <h3 class="mb-5">Work Experience</h3>
+    <div class="resume-item d-flex work">
+        <div>
+            <h4>Senior Front End Developer</h4>
+                <div class="d-flex">
+                            <div class="d-flex resume-meta">
+                                <span class="mr-3">
+                                <span><i class="far fa-building"></i>Facebook, Inc.</span>
+                                <span>
+                                <span><i class="fa fa-location"></i>San Francisco</span>
+                        </div>
+<div></div>
+</div>
+</div>
+<div class="ml-auto resume-meta">
+<div class="clearfix">
+<span class="period d-block float-right"><span>Fulltime</span></span>
+</div>
+<span class="icon">
+<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-event" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"></path>
+<path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"></path>
+<rect width="2" height="2" x="11" y="6" rx=".5"></rect>
+</svg>
+</span>
+<span>November 2019 - Present </span>
+</div>
+</div> 
+<div class="resume-item d-flex work">
+<div>
+
+<h3 class="mt-5 mb-3">Education</h3>
+<div class="resume-item d-flex work">
+<h4>Batchelor in Software Engineering</h4>
+<div class="d-flex">
+<div class="d-flex resume-meta">
+<span class="mr-3">
+<span class="icon">
+<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-award" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l-1.51-.229L8 1.126l-1.355.702-1.51.229-.684 1.365-1.086 1.072L3.614 6l-.25 1.506 1.087 1.072.684 1.365 1.51.229L8 10.874l1.356-.702 1.509-.229.684-1.365 1.086-1.072L12.387 6l.248-1.506-1.086-1.072-.684-1.365z"></path>
+<path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"></path>
+</svg>
+</span>
+<span>Columbia University</span>
+</span>
+</div>
+<div></div>
+</div>
+</div>
+<div class="ml-auto resume-meta">
+<span class="icon">
+<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-event" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"></path>
+<path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"></path>
+<rect width="2" height="2" x="11" y="6" rx=".5"></rect>
+</svg>
+</span>
+<span>March 2015 - November 2019 </span>
+</div>
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>       
+
+ <!-- Third Parallax Image with Contact Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Contact Info</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Contact Me</h3>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="contact.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Florida, US<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: (941) 713-5806
+                    <br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+                    sammanning13@gmail.com<br>
+                </div>
+                <p>Contact me with any questions or opportunities:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-github w3-hover-opacity"></i>
+                HYPERLINK TO GITHUB
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+                HYPERLINK TO INSTAGRAM
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+                HYPERLINK TO TWITTER
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                HPERLINK TO LINKEDIN
+        </div>
+    </footer>
+
+    <script>
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
